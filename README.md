@@ -1,4 +1,4 @@
 0914-Web-Programming
 ====================
 
-Code examples
+In this repository you will find code examples for the Web Programming course.
