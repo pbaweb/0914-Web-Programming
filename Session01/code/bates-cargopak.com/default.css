@@ -1,0 +1,214 @@
+/* default.css */
+
+html, body {
+	font-family: Verdana, Tahoma, Arial, Helvetica;
+	font-size: 11px;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #cccccc;
+	display: flex;
+	flex-direction: column;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+main {display: block;}
+
+body > * {
+	width: 100%;
+}
+body > header {
+	font-family: Tahoma;
+    letter-spacing: -5px;
+    background-color: white;
+
+    order: 2;
+}
+
+body > header h1 {
+	text-transform: uppercase;
+	margin: 0;
+	font-size: 60px;
+	line-height: .8em;
+}
+
+body > header h1 a {
+	padding: 0 300px 0 0;
+	padding-top: .5em;
+	display: inline-block;
+	color: black;
+	text-decoration: none;
+	background-image: url('images/headerlogo.png');
+	background-repeat: no-repeat;
+	background-position: top right;
+	background-size: contain;
+}
+
+body > nav {
+	order: 3;
+}
+
+body > nav ul {
+	background-color: #efd388;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	height: 2em;
+}
+
+body > nav ul.submenu {
+	background-color: #79746c;
+}
+
+body > nav li {
+	display: inline-block;
+	border-color: white;
+	border-width: 0 1px 0 0;
+	border-style: solid;
+}
+
+body > nav li:first-child {
+	border-width: 0 1px 0 1px;
+}
+
+body > nav a {
+	display: inline-block;
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+	padding: .3em;
+}
+
+body > nav a:hover {
+	background-color: #f3f3f3;
+	color: #666666;
+}
+
+body > main {
+	background-color: white;
+	order: 4;
+	display: flex;
+}
+
+body > main > section {
+	height: 320px;
+	padding: 0 5%;
+    overflow: auto;
+    width: 40%;
+    float: left;
+}
+
+body > main h2 {
+	font-family: serif;
+	font-size: 200%;
+    font-style: italic;
+    font-weight: normal;
+}
+
+main > div.image img {
+	display: block;
+}
+ 
+body > footer {
+	order: 5;
+	background-color: #efd388;
+	background-image: url('images/479_bundrotation01.jpg');
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-size: 50%;
+}
+
+body > footer .contact {
+	background-image: url('images/cp_bottomlogoo.gif');
+	background-repeat: no-repeat;
+	background-position: top right;
+	background-size: contain;
+	padding: 2em;
+	margin: .5em .5em .5em 50%;
+}
+
+aside.sites {
+	order: 1;
+	display: flex;
+	justify-content: flex-end;
+}
+
+aside.sites ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+aside.sites li {
+	display: inline-block;
+	padding: .5em .2em;
+}
+
+aside.sites a {
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: inline-block;
+	width: 26px;
+	height: 18px;
+	text-decoration: none;
+	opacity: .6;
+}
+
+aside.sites a:hover {
+	opacity: 1;
+}
+aside.sites a span {
+	color: transparent;
+}
+
+aside.sites a.arabic {
+	background-image: url('images/flag_arabic_h.gif');
+}
+
+
+aside.sites a.cn {
+	background-image: url('images/flag_cn_h.gif');
+}
+
+aside.sites a.de {
+	background-image: url('images/flag_de_h.gif');
+}
+
+aside.sites a.dk {
+	background-image: url('images/flag_dk_h.gif');
+}
+
+aside.sites a.en {
+	background-image: url('images/flag_en_h.gif');
+}
+
+aside.sites a.es {
+	background-image: url('images/flag_es_h.gif');
+}
+
+aside.sites a.fr {
+	background-image: url('images/flag_fr_h.gif');
+}
+
+aside.sites a.it {
+	background-image: url('images/flag_it_h.gif');
+}
+
+aside.sites a.pl {
+	background-image: url('images/flag_pl_h.gif');
+}
+aside.sites a.pt {
+	background-image: url('images/flag_pt_h.gif');
+}
+aside.sites a.ru {
+	background-image: url('images/flag_ru_h.gif');
+}
+
+a.blacklink {
+	color: black;
+}
