@@ -8,3 +8,4 @@ Web Development tools
 - Chrome -> "F12"
 
 ###Other tools
+- PHPstorm and xdebug
