@@ -8,6 +8,10 @@ Web Development tools
 - Chrome -> "F12"
 
 ###Other tools
+- PHPstorm and xdebug
 
 ###websites
-http://validator.nu/
+- http://validator.nu/
+
+
+
