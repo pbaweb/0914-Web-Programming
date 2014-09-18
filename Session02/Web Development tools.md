@@ -8,3 +8,6 @@ Web Development tools
 - Chrome -> "F12"
 
 ###Other tools
+
+###websites
+http://validator.nu/
