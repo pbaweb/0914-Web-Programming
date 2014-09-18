@@ -6,6 +6,7 @@ Web Development tools
 - Whatfont?
 - JetBrain for Chrome I think
 - Chrome -> "F12"
+- http://mxtoolbox.com/ - security things
 
 ###Other tools
 - PHPstorm and xdebug
