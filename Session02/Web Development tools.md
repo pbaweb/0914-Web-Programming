@@ -5,6 +5,7 @@ Web Development tools
 - Firebug for Firefox
 - Whatfont?
 - JetBrain for Chrome I think
-- Test for testing tests
+- Chrome -> "F12"
 
 ###Other tools
+- PHPstorm and xdebug
