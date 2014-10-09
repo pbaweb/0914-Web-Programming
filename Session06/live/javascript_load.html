@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>JavaScript load</title>
+		<script>
+			console.debug('script in head');
+			window.onload = function(){console.debug('document.onload')};
+			window.addEventListener('load', function(){
+				console.debug('window addeventlistener 1');
+			}, false);
+			window.addEventListener('load', function(){
+				console.debug('window addeventlistener 2');
+			}, false);
+			document.addEventListener('DOMContentLoaded', function(){
+				console.debug('document DOMContentLoaded');
+			}, false);
+		</script>
+	</head>
+	<body onload="console.debug('body onload');">
+		<h1>JavaScript load</h1>
+	</body>
+</html>
