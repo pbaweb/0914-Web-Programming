@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>XMLHttpRequest</title>
+		<style>
+			p.link {
+				cursor: pointer;
+				text-decoration: underline;
+				color: blue;
+			}
+		</style>
+		<script>
+			var load = function(){
+				var plinks = document.getElementsByClassName('link');
+				for(var i = 0; i < plinks.length; i++){
+					var link = plinks[i];
+					link.addEventListener('click', function(){
+						loadXml(this.id);
+					}, false);
+				}
+			};
+			
+			var loadXml = function(id){
+				var client = new XMLHttpRequest();
+				client.onreadystatechange = handler;
+				client.open("GET", id + ".xml");
+				client.send();
+			};
+			
+			var handler = function() {
+				if(this.readyState == this.DONE){
+					processData(this.responseXML);
+					return;
+				}
+			};
+			
+			var processData = function(data){
+				var list = document.getElementById('list');
+				list.innerHTML = "";
+				for(var i = 0; i < data.documentElement.childNodes.length; i++){
+					var item = data.documentElement.childNodes[i];
+					var li = document.createElement('li');
+					li.innerHTML = item.getAttribute('title');
+					list.appendChild(li);
+				}
+			}
+			
+			window.addEventListener('load', load, false);
+		</script>
+
+	</head>
+	<body>
+		<section>
+			<header>
+				<h1>XMLHttpRequest</h1>
+			</header>
+			<article>
+				<section>
+					<p class="link" id="xmldoc">Get data from xmldoc.xml</p>
+					<p class="link" id="xmldoc2">Get data from xmldoc2.xml</p>
+					<p>Content from XML document:</p>
+					<ul id="list"></ul>
+				</section>
+			</article>
+		</section>
+	</body>
+</html>
