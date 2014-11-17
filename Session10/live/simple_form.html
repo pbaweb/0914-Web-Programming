@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Simple form</title>
+		<script>
+			var createNewNote = function(title){
+				alert('send new note: ' + title);
+				var clinet = new XMLHttpRequest();
+				//bla, bla
+			};
+			window.addEventListener('load', function(){
+				if(typeof XMLHttpRequest == 'function'){
+					document.forms.newnote.addEventListener('submit', function(e){
+						e.preventDefault();
+						createNewNote(e.target.title.value);
+					}, false);
+				}
+			},false);
+		</script>
+	</head>
+	<body>
+		<h1>Simple form</h1>
+		<form name="newnote" method="POST">
+			<input type="text" name="title" />
+			<button>Create note</button>
+		</form>
+	</body>
+</html>

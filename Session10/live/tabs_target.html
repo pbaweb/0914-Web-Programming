@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tabs :target</title>
+		<style>
+			main {
+				position: relative;
+			}
+
+			main > section:first-child div.content {
+				background-color: yellow;
+				z-index: 2;
+			}
+
+			main > section div.content {
+				width: 400px;
+				height: 300px;
+				position: absolute;
+				z-index: 1;	
+				margin-top: 1em;
+			}
+
+			main > section div.content {
+				/*background-color: white;
+				width: 400px;
+				height: 300px;
+				position: absolute;
+				z-index: 1;	*/
+			}
+
+			main > section:target div.content {
+				background-color: yellow;
+				z-index: 2;
+			}
+
+			nav > ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+
+			nav > ul li {
+				display: inline-block;
+			}
+
+			main > section a{
+				position: absolute;
+				width: 100px;
+			}
+			main > section a[href = "#t1"] {
+				left: 0;
+			}
+			main > section a[href = "#t2"] {
+				left: 100px;
+			}
+			main > section a[href = "#t3"] {
+				left: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li><a href="#t1">Tab 1</a></li>
+				<li><a href="#t2">Tab 2</a></li>
+				<li><a href="#t3">Tab 3</a></li>
+			</ul>
+		</nav>
+		<main>
+			<section id="t1">
+				<div><a href="#t1">Tab 1</a></div>
+				<div class="content">
+					<h2>Tab 1</h2>
+				</div>
+			</section>
+			<section id="t2">
+				<div><a href="#t2">Tab 2</a></div>
+				<div class="content">
+					<h2>Tab 2</h2>
+				</div>
+			</section>
+			<section id="t3">
+				<div><a href="#t3">Tab 3</a></div>
+				<div class="content">
+					<h2>Tab 3</h2>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>
