@@ -1,0 +1,36 @@
+@primary_color: CornflowerBlue;
+@body_width: 900px;
+@menu_width: 300px;
+@list-style: none;
+body {
+	background-color: @primary_color;
+	width: @body_width;
+	margin: 0 auto;
+	> main {
+		background-color: white;
+		max-width: @body_width - @menu_width;
+		margin-left: @menu_width;
+	}
+}
+
+nav {
+	width: @menu_width;
+	float: left;
+	> ul {
+		list-style: @list-style;
+		margin: 0;
+		padding: 0;
+		li a {
+			text-decoration: none;
+		}
+	}
+}
+
+header {
+	border-style: solid;
+	border-color: darken(@primary_color, 60%);
+	border-width: 0 0 2px 0;
+	h1 {
+		color: darken(@primary_color, 30%);
+	}
+}

@@ -1,0 +1,32 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+//@import "compass/reset";
+@import "my-icons/*.png";
+@include all-my-icons-sprites;
+
+
+
+$primary_color: CornflowerBlue;
+/* style for body... */
+body {
+	font-family: sans-serif;
+	width: 900px;
+	margin: 0 auto;
+	background-color: $primary_color;
+	> main {
+		width: 600px;
+	}
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+nav ul li {
+	background-repeat: no-repeat;
+	padding-left: 20px;
+}
