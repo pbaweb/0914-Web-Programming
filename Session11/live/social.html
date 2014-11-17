@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Social</title>
+		<style type="text/css">
+			nav ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+			nav ul li {
+				background-repeat: no-repeat;
+				padding-left: 20px;
+			}
+
+			.icon {
+				background-image: url('sprite2.png');
+				background-repeat: no-repeat;
+				display: inline-block;
+				width: 40px;
+				height: 40px;
+			}
+
+			.facebook {
+				background-position: -40px 0;
+			}
+
+			.youtube {
+				background-position: -80px 0;
+			}
+
+			a.icon {
+				color: transparent;
+			}
+
+			a.facebook:hover {
+				background-position: -40px -40px;
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li><span class="icon facebook"></span>Facebook</li>
+				<li><span class="icon youtube"></span>Youtube</li>
+			</ul>
+		<p><a href="#" class="icon facebook">Link</a></p>
+	</body>
+</html>
