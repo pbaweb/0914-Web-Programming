@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+	<script>
+		var main, alertbox;
+
+		var readystatehandler = function(e){
+				console.debug(e.target.response);
+				if(e.target.readyState == 4){
+					var loginobj = JSON.parse(e.target.response);
+					alertbox.innerHTML = 'Welcome ' + loginobj.name;
+				}
+			};
+
+		var loginSubmitted = function(e){
+			e.preventDefault();
+			if(e.target.username.value != '' && e.target.password.value != ''){
+				var user = {};
+				user.username = e.target.username.value;
+				user.password = e.target.password.value;
+
+				var client = new XMLHttpRequest();
+				client.addEventListener('readystatechange', readystatehandler, false);
+				client.open('POST', 'login.json');
+				client.send(JSON.stringify(user)));
+			}
+		};
+
+		window.addEventListener('load', function(){
+				main = document.querySelector('body main');
+				alertbox = document.querySelector('div#alert');
+				document.forms.login.addEventListener('submit', loginSubmitted, false);
+			}, false);
+	</script>
+</head>
+<body>
+	<h1>Form</h1>
+	<form name="login" method="POST">
+		<label>Username: <input type="text" name="username"/></label>
+		<label>Password: <input type="password" name="password"/></label>
+		<button>Login</button>
+	</form>
+	<main>
+		<div id="alert"></div>
+	</main>
+</body>
+</html>

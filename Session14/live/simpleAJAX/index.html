@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Main page</title>
+		<script>
+			var main, nav;
+
+			var readystatehandler = function(e){
+				console.debug(e);
+				if(e.target.readyState == 4){
+					main.innerHTML = e.target.response;
+				}
+			};
+
+			var getContentFromFile = function(file){
+				var client = new XMLHttpRequest();
+				client.addEventListener('readystatechange', readystatehandler, false);
+				client.open('GET', file);
+				client.send();
+			};
+
+			var navClicked = function(e){
+				e.preventDefault();
+				
+				if(e.target.tagName == 'A'){
+					var href = e.target.attributes['href'].value;
+					getContentFromFile(href);
+				}
+			};
+
+			window.addEventListener('load', function(){
+				main = document.querySelector('body main');
+				nav = document.querySelector('body nav');
+				nav.addEventListener('click', navClicked, false);
+			}, false);
+		</script>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li><a href="page1.html">Page 1</a></li>
+				<li><a href="page2.html">Page 2</a></li>
+			</ul>	
+		</nav>
+		<main>
+		</main>
+	</body>
+</html>
