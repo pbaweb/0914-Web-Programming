@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="WebApplicationWithAJAX.ChinookService" CodeBehind="ChinookService.svc.cs" %>

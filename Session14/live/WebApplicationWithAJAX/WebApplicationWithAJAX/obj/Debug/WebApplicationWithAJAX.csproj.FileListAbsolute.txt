@@ -1,0 +1,5 @@
+D:\Dokumenter\web0914 - Web Programming\0914-Web-Programming\Session14\live\WebApplicationWithAJAX\WebApplicationWithAJAX\bin\WebApplicationWithAJAX.dll
+D:\Dokumenter\web0914 - Web Programming\0914-Web-Programming\Session14\live\WebApplicationWithAJAX\WebApplicationWithAJAX\bin\WebApplicationWithAJAX.pdb
+D:\Dokumenter\web0914 - Web Programming\0914-Web-Programming\Session14\live\WebApplicationWithAJAX\WebApplicationWithAJAX\obj\Debug\WebApplicationWithAJAX.csprojResolveAssemblyReference.cache
+D:\Dokumenter\web0914 - Web Programming\0914-Web-Programming\Session14\live\WebApplicationWithAJAX\WebApplicationWithAJAX\obj\Debug\WebApplicationWithAJAX.dll
+D:\Dokumenter\web0914 - Web Programming\0914-Web-Programming\Session14\live\WebApplicationWithAJAX\WebApplicationWithAJAX\obj\Debug\WebApplicationWithAJAX.pdb
